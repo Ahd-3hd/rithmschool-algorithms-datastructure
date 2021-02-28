@@ -53,3 +53,37 @@ function logMultiples(num) {
     }
 }
 ```
+
+### O(n) : linear time.
+
+linear time when the data set is iterated over approximately one time.
+
+the runtime of the function should be roughly proportional to the size of numberOfTimes.
+
+n -> 1 => iterations 1 time.
+n -> 2 => iterations 2 times.
+n -> 3 => iterations 3 times.
+
+```
+function sayHello(numberOfTimes) {
+    for (var i = 0; i < numberOfTimes; i++) {
+        console.log("Hello");
+    }
+}
+```
+
+we're iterating over the dataset (numbers) n times twice.
+therefore it is O(n+n) => O(2n)
+since constants are ignored it can be described as O(n)
+
+```
+function doubleThenTriple(numbers) {
+    var doubled = numbers.map(function(num) {
+        return num * 2;
+    });
+
+    return doubled.map(function(num) {
+        return num * 3;
+    });
+}
+```
