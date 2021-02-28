@@ -180,3 +180,33 @@ function logSomeMultiples(n) {
     }
 }
 ```
+
+### space complexity:
+
+describes how much memory our program requires.
+
+fn total is time complexity is o(n) since the execution increase proportional with the input size.
+but space complexity is o(1) since total will only store/return one unit regardless of the input size.
+
+```
+function total(array) {
+    var total = 0;
+    for (var i = 0; i < array.length; i++) {
+        total += array[i];
+    }
+    return total;
+}
+```
+
+double time complexity is o(n) linear => increase proprtional with input size
+space complexity is o(n) new array size increases proprtional with input size.
+
+```
+function double(array) {
+    var newArray = [];
+    for (var i = 0; i < array.length; i++) {
+        newArray.push(2 * array[i]);
+    }
+    return newArray;
+}
+```
