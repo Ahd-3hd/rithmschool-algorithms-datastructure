@@ -1,6 +1,6 @@
-###Algorithms and Data Structures.
+### Algorithms and Data Structures.
 
-##Lesson One:
+## Lesson One:
 
 Big O Notation:
 
@@ -18,4 +18,38 @@ O(99999999999) --> O(1)
 O(10*n2 + 5n + 20) --> O(n2)
 O(n * n) --> O(n2)
 O(n*log(n) + 30000 _ n) --> O(n _ log(n))
-3-
+
+### O(1)
+
+functions that are constant time, because the algorithm is not dependant on a variable size; regardless of the input size the runtime
+will not grow beyond the constant time.
+
+examles:
+
+constant time or O(1) because the expression inside the function will only execute once.
+
+```
+function add(num1, num2, num3) {
+   return num1 + num2 + num3;
+}
+```
+
+constant time or O(1) because the for loop will execute 100 times regardless of the inputs.
+
+```
+function sayHello() {
+    for (var i = 0; i < 100; i++) {
+       console.log("Hello");
+    }
+}
+```
+
+constant time or O(1) because the for loop will execute 10 times regardless of the inputs.
+
+```
+function logMultiples(num) {
+    for (var i = 0; i < 10; i++) {
+        console.log(i * num);
+    }
+}
+```
