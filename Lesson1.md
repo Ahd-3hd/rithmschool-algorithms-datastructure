@@ -87,3 +87,96 @@ function doubleThenTriple(numbers) {
     });
 }
 ```
+
+### O(n^2)
+
+iterating over each element in each iteration. ( nested iterations )
+
+allPairs function iterates over an array of elements, and in each iteration a nested iteration happens.
+
+```
+function allPairs(arr) {
+    var pairs = [];
+    for (var i = 0; i < arr.length; i++) {
+        for (var j = i + 1; j < arr.length; j++) {
+            pairs.push([arr[i], arr[j]]);
+        }
+    }
+
+    return pairs;
+}
+```
+
+bubbleSort loops through the given array, and in each iteration another nested loop happens that iterate over the array again.
+
+```
+function bubbleSort(arr) {
+  var len = arr.length;
+  var lastSwap;
+  var temp
+  while (len != 0) {
+    lastSwap = 0;
+    for (var i = 1; i < len; i++) {
+      if (arr[i - 1] > arr[i]) {
+        // Swap the two elements
+        temp = arr[i-1];
+        arr[i-1] = arr[i];
+        arr[i] = temp;
+        lastSwap = i;
+      }
+    }
+    len = lastSwap;
+  }
+}
+
+other implementation:
+
+function bubbleSort(arr) {
+
+  for(let i=0;i<arr.length;i++){
+
+    for(let j=1;j<arr.length;j++){
+      if(arr[j] < arr[j-1]){
+        const temp = arr[j];
+        arr[j] = arr[j-1];
+        arr[j-1] = temp;
+      }
+
+    }
+
+  }
+}
+
+```
+
+when n = 1 it logs 1 multiples, n = 2 => 4 multiples, n = 3 => 9 multiples, n = 4 => 16 multiples
+
+```
+function logMultiples(n) {
+    for (var num1 = 1; num1 <= n; num1++) {
+        for (var num2 = 1; num2 <= n; num2++) {
+            console.log(num1 * num2);
+        }
+    }
+}
+```
+
+rule of thumb: nested loops "generally" are O(n^level of nesting).
+
+it's not always the case tho. eg:
+
+this is a nested loop, bit because of the condition Math.min(n,10) the code inside the loop will execute at max 10 times.
+
+the outer loop is o(n) => because number of iteration depends on input n.
+nested loop is o(1) => condition is run at max 10 time.
+1 is ignored, and the function runtime is o(n)
+
+```
+function logSomeMultiples(n) {
+    for (var num1 = 1; num1 <= n; num1++) {
+        for (var num2 = 1; num2 <= Math.min(n, 10); num2++) {
+            console.log(num1 * num2);
+        }
+    }
+}
+```
