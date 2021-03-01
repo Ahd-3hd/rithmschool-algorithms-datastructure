@@ -112,3 +112,19 @@ As tempting as it may seem, do not use loops to solve this problem.
 //   return arr;
 // }
 // console.log(replicate(3, 5));
+
+//Write a function called search that finds a value in an array and returns the index where the value is at. If the value is not found, the function should return negative 1.
+
+//this solution works backwards but it works xD
+// function search(arr, val) {
+//   if (arr.length <= 0) return -1;
+//   const i = arr.length - 1;
+//   if (val === arr[i]) {
+//     return i;
+//   } else {
+//     arr.pop();
+//     return search(arr, val);
+//   }
+// }
+
+// console.log(search([1, 2, 3, 4, 5, 4, 1, 2, 3, 14, 14, 12, 2, 3, 5], 5)); // 4
