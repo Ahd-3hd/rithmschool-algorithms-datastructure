@@ -128,3 +128,39 @@ As tempting as it may seem, do not use loops to solve this problem.
 // }
 
 // console.log(search([1, 2, 3, 4, 5, 4, 1, 2, 3, 14, 14, 12, 2, 3, 5], 5)); // 4
+
+// Write a function called stringifyNumbers which takes in an object
+// and finds all of the values which are numbers and converts them to strings. Recursion would be a great way to solve this!
+
+// var obj = {
+//   num: 1,
+//   test: [],
+//   data: {
+//     val: 4,
+//     info: {
+//       isRight: true,
+//       random: 66,
+//     },
+//   },
+// };
+// function stringifyNumbers(obj) {
+//   let result = {};
+//   let keys = Object.keys(obj);
+
+//   for (let i = 0; i < keys.length; i++) {
+//     let val = obj[keys[i]];
+//     if (typeof val === "number") {
+//       result[keys[i]] = `${val}`;
+//     } else if (Array.isArray(val)) {
+//       result[keys[i]] = val.map((item) => {
+//         if (typeof item === "number") return `${item}`;
+//         return stringifyNumbers(item);
+//       });
+//     } else {
+//       result[keys[i]] = stringifyNumbers(val);
+//     }
+//   }
+//   return result;
+// }
+
+// console.log(stringifyNumbers(obj));
